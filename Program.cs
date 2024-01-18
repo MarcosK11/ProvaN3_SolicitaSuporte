@@ -14,9 +14,17 @@ namespace ProvaN3_SolicitaSuporte
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Home());
+            if (Administrator.IsAdministrator())
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new Home());
+            }
+            else
+            {
+                Administrator.RunElevated();
+            }
+
         }
     }
 }

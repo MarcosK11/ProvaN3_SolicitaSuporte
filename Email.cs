@@ -38,8 +38,8 @@ namespace ProvaN3_SolicitaSuporte
                     message.To.Add(destinatario.Trim());
                 }
                 message.From = new MailAddress(FromEmail);
-                message.Subject = subject == null || subject == "" ? "Assunto teste" : subject;
-                message.Body = body == null || body == "" ? "Mensagem padrão de teste\nAtenciosamente,\nMarcos Kohler" : body;
+                message.Subject = string.IsNullOrEmpty(subject)  ? "Assunto teste" : subject;
+                message.Body = string.IsNullOrEmpty(body) ? "Mensagem padrão de teste\nAtenciosamente,\nMarcos Kohler" : body;
 
 
 

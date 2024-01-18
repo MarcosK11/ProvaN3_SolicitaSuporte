@@ -31,7 +31,7 @@ namespace ProvaN3_SolicitaSuporte
         {
             string todayDate = DateTime.Now.ToString("ddMMyyyyHHmmss");
             string fileName = $"Screenshot_{todayDate}.jpg";
-            string filePath = Path.Combine(@"C:\teste\", fileName);
+            string filePath = Path.Combine(@"C:\TEMP\", fileName);
             string directory = Path.GetDirectoryName(filePath);
 
             Email newEmail = new Email();
